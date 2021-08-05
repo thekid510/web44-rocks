@@ -1,6 +1,6 @@
 require('dotenv').config() // this allows us to "inject" fake enviorment variables
 
-const { PORT } = require('./config')
+// const { PORT } = require('./config')
 const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
@@ -22,7 +22,7 @@ server.use('*', (req,res)=> {
         message: ' WEB 44 is Awesome'
     })
 })
-server.listen(PORT, ()=> { // heroku uses different port
-    console.log(`listening on ${PORT}`)
+server.listen(process.env.PORT || 6000, ()=> { // heroku uses different port
+    console.log(`listening on ${process.env.PORT || 6000}`)
 })
  
