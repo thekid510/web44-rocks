@@ -13,13 +13,13 @@ server.use(helmet())
 
 server.get('/', (req,res)=> {
     res.send(`
-    <h1>Web 30 is awesome</h1>
+    <h1>Web 32 is quiet</h1>
     `)
 })
 
 server.use('*', (req,res)=> {
     res.json({
-        message: ' WEB 30 is Awesome'
+        message: ' WEB 32 is quiet'
     })
 })
 server.listen(process.env.PORT || 6000, ()=> { // heroku uses different port
