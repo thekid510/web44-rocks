@@ -13,7 +13,7 @@ server.use(helmet())
 
 server.get('/', (req,res)=> {
     res.send(`
-    <h1>Web 32 is quiet</h1>
+    <h1>Web 51 is too cool for school </h1>
     `)
 })
 
